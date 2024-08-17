@@ -12,6 +12,5 @@ RUN npm run build
 #Running phase
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
-
-#docker build -t prod . | docker run -p 8080:80 prod 
